@@ -1,0 +1,448 @@
+/* Combined CSS for Katsuya - incorporating teacher's nb-shop.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg: #FEECE2;
+  --blue: #0e0e0e;
+  --primary-color: #561C24;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+/* Header Styles */
+header nav {
+  height: 15vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 45px;
+  color: #561C24;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+header ul {
+  display: flex;
+  gap: 5rem;
+  list-style: none;
+}
+
+header a {
+  display: block;
+  color: #561C24;
+  text-decoration: none;
+  border-radius: .2rem;
+  padding: .5rem 1rem;
+  transition: .2s ease-in;
+  border-bottom: 2px solid var(--blue);
+  overflow: hidden;
+  position: relative;
+}
+
+header a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: .1rem;
+  z-index: -1;
+  transition: .2s ease-in;
+  transform: translateX(-101%);
+  background: var(--blue);
+}
+
+header a:hover::before {
+  transform: translateX(0);
+}
+
+header a:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* Product Styles */
+.product {
+  cursor: pointer;
+  background-color: #F3F8FF; /* White background with light blue tint */
+  border: 1px solid #f5ecec; /* Light gray border */
+  padding: 15px;
+  margin: 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product img,
+.product h5,
+.product button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Add border-radius and transition to product image */
+.product img {
+  border: 3px solid #d8d6d6;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Change box-shadow and image transform on hover */
+.product:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product:hover img {
+  transform: scale(1.1);
+}
+
+.product h5 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Button styles */
+.add-to-cart {
+  background-color: #561C24 !important;
+  color: white !important;
+  border: none !important;
+  padding: 8px 15px !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  transition: all 0.3s !important;
+  font-weight: 500 !important;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4) !important;
+}
+
+.add-to-cart:hover {
+  background-color: #0e0e0e !important;
+  transform: scale(1.05) !important;
+}
+
+/* Cart container with horizontal scroll */
+#cart {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Table styling */
+#cart table {
+  width: 100%;
+  min-width: 500px; /* Ensure table has a minimum width */
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+#cart th, #cart td {
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+#cart th {
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  position: sticky; /* Optional: sticky headers */
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+/* Column widths */
+#cart th:nth-child(1), #cart td:nth-child(1) {
+  min-width: 150px; /* Product name */
+}
+
+#cart th:nth-child(2), #cart td:nth-child(2) {
+  min-width: 80px; /* Quantity */
+}
+
+#cart th:nth-child(3), #cart td:nth-child(3) {
+  min-width: 80px; /* Price */
+}
+
+#cart th:nth-child(4), #cart td:nth-child(4) {
+  min-width: 80px; /* Total */
+}
+
+#cart th:nth-child(5), #cart td:nth-child(5) {
+  min-width: 80px; /* Actions */
+  text-align: center;
+}
+
+/* Style for delete button */
+.btn-danger {
+  background-color: #dc3545 !important;
+  border: none !important;
+  color: white !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+}
+
+/* Total price styling - keep outside of scroll area */
+#cart p {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+  padding: 15px;
+  margin: 0;
+  border-top: 1px solid #ddd;
+  background-color: white;
+}
+
+/* Custom scrollbar for better visibility (optional) */
+#cart::-webkit-scrollbar {
+  height: 8px;
+}
+
+#cart::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#cart::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#cart::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* Print button styling to match reference */
+#printCart {
+  background-color: #561C24 !important;
+  border: none !important;
+  color: white !important;
+  padding: 12px 20px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-top: 15px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+  cursor: pointer !important;
+  display: block !important;
+}
+
+#printCart:hover {
+  background-color: #450f17 !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3) !important;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product {
+    margin-bottom: 20px;
+  }
+  
+  header nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  header ul {
+    margin-top: 15px;
+  }
+  
+  header ul li {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  /* Cart responsive adjustments */
+  #cart th, #cart td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  
+  #printCart {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #cart th, #cart td {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+}
+
+@font-face {
+  font-family: 'MN Tonkatsu';
+  src: url('assets/font/MeawnumDemo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MN Tonkatsu';
+  src: url('assets/font/MeawnumDemo.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'MN Tonkatsu';
+  src: url('assets/font/MeawnumDemo.ttf') format('truetype');
+  font-weight: normal; 
+  font-style: italic;
+  font-display: swap; 
+}
+
+* {
+  font-family: 'MN Tonkatsu', 'Poppins', sans-serif;
+}
+
+.thai-text {
+  font-family: 'MN Tonkatsu', sans-serif;
+}
+
+/* Add this CSS to your nb-shop.css file */
+
+/* Styling for spice level selection */
+.spice-level-container {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.spice-level-container p {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #561C24;
+}
+
+.spice-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.spice-option {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.spice-option input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.spice-option label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chili-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+}
+
+/* Add hover effect for spice options */
+.spice-option:hover {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* Make product cards taller to fit spice selection */
+.product {
+  min-height: 420px;
+}
+
+/* Add this to your nb-shop.css file for better quantity controls styling */
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-controls button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quantity-controls button:hover {
+  background-color: #e9ecef;
+}
+
+.quantity-controls button:active {
+  background-color: #dee2e6;
+}
+
+.quantity-controls span {
+  margin: 0 8px;
+  min-width: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Style for decrease button when quantity is 1 */
+.quantity-controls button.decrease-to-remove {
+  color: #dc3545;
+}
+
+.quantity-controls button.decrease-to-remove:hover {
+  background-color: rgba(220, 53, 69, 0.1);
+}
