@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="./image/x-icon" href="./image/favicon.ico">
+    <title>TASTY BITES - Sides & Appetizers</title>
+    <link rel="stylesheet" href="nb-shop.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>
+                TASTY BITES
+            </h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="logo d-flex justify-content-center" style="margin-bottom: 30px">
+                    <h1>Sides & Appetizers</h1><br /><br />
+                </div>
+
+                <div id="products" class="row">
+                    <!-- Product 1 -->
+                    <div class="col-md-3 product">
+                        <img src="./product_img/Sides7.jpg" alt="Tonkatsu Pork Fillet" width="130px" height="130px" />
+                        <h5>หมูทงคัตสึ สันนอก<br>฿119</h5>
+                        <button class="btn btn-primary add-to-cart" data-product-id="Tonkatsu Pork Fillet" data-price="119">
+                            Add to Cart
+                        </button>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="col-md-3 product">
+                        <img src="./product_img/Sides1.jpg" alt="Tonkatsu Pork Tenderloin" width="130px" height="130px" />
+                        <h5>หมูทงคัตสึ สันใน<br>฿69</h5>
+                        <button class="btn btn-primary add-to-cart" data-product-id="Tonkatsu Pork Tenderloin" data-price="69">
+                            Add to Cart
+                        </button>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="col-md-3 product">
+                        <img src="./product_img/Sides8.jpg" alt="Tonkatsu Ground Pork" width="130px" height="130px" />
+                        <h5>หมูทงคัตสึ หมูบด<br>฿89</h5>
+                        <button class="btn btn-primary add-to-cart" data-product-id="Tonkatsu Ground Pork" data-price="89">
+                            Add to Cart
+                        </button>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="col-md-3 product">
+                        <img src="./product_img/Sides2.jpg" alt="Katsu Shrimp" width="130px" height="130px" />
+                        <h5>คัตสึกุ้ง<br>฿59</h5>
+                        <button class="btn btn-primary add-to-cart" data-product-id="Katsu Shrimp" data-price="59">
+                            Add to Cart
+                        </button>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="col-md-3 product">
+                        <img src="./product_img/Sides3.jpg" alt="Fried Chicken Karaage (10 pieces)" width="130px" height="130px" />
+                        <h5>ไก่ทอดคาราเกะ (10 ชิ้น)<br>฿159</h5>
+                        <button class="btn btn-primary add-to-cart" data-product-id="Fried Chicken Karaage (10 pieces)" data-price="159">
+                            Add to Cart
+                        </button>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="col-md-3 product">
+                        <img src="./product_img/Sides4.jpg" alt="Combo Box 1: Tonkatsu Pork Tenderloin and Katsu Shrimp" width="130px" height="130px" />
+                        <h5>คอมโบ บ็อกซ์ 1 : หมูทงคัตสึ สันใน และคัตสึกุ้ง<br>฿99</h5>
+                        <button class="btn btn-primary add-to-cart" data-product-id="Combo Box 1: Tonkatsu Pork Tenderloin and Katsu Shrimp" data-price="99">
+                            Add to Cart
+                        </button>
+                    </div>
+                    
+                    <!-- Product 7 -->
+                    <div class="col-md-3 product">
+                        <img src="./product_img/Sides5.jpg" alt="Double Size: Cheesy Sticks (2 pieces) and Katsu Shrimp (1 piece) or Fried Chicken Karaage (3 pieces)" width="130px" height="130px" />
+                        <h5>ดับเบิ้ล ไซส์ : ชีสซี่ สติ๊กซ์ (2 ชิ้น) และคัตสึกุ้ง (1 ชิ้น) 'หรือ' ไก่ทอดคาราเกะ (3 ชิ้น)<br>฿105</h5>
+                        <button class="btn btn-primary add-to-cart" data-product-id="Double Size: Cheesy Sticks (2 pieces) and Katsu Shrimp (1 piece) or Fried Chicken Karaage (3 pieces)" data-price="105">
+                            Add to Cart
+                        </button>
+                    </div>
+                    
+                    <!-- Product 8 -->
+                    <div class="col-md-3 product">
+                        <img src="./product_img/Sides6.jpg" alt="Party Size: Choose Your Menu" width="130px" height="130px" />
+                        <h5>ปาร์ตี้ ไซส์ : เลือกเมนูได้เอง<br>฿209</h5>
+                        <button class="btn btn-primary add-to-cart" data-product-id="Party Size: Choose Your Menu" data-price="209">
+                            Add to Cart
+                        </button>
+                    </div>
+                    
+                    <!-- Product 9 -->
+                    <div class="col-md-3 product">
+                        <img src="./product_img/Sides9.jpg" alt="Katsu Chicken" width="130px" height="130px" />
+                        <h5>คัตสึไก่<br>฿99</h5>
+                        <button class="btn btn-primary add-to-cart" data-product-id="Katsu Chicken" data-price="99">
+                            Add to Cart
+                        </button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card" style="border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div class="card-header" style="background-color: #561C24; color: white; border-top-left-radius: 15px; border-top-right-radius: 15px; padding: 15px;">
+                        <h2 style="margin: 0; display: flex; align-items: center; font-size: 22px;">
+                            <i class="fas fa-shopping-cart mr-2"></i> Your Order
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="cart" class="mt-2">
+                            <p>No items in order.</p>
+                        </div>
+                        <button class="btn btn-block mt-3" id="printCart" style="background-color: #561C24; color: white; font-weight: 600; padding: 12px; border-radius: 8px;">
+                            <i class="fas fa-print mr-2"></i> Print Order Receipt
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and Popper.js before your closing body tag -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>
